@@ -60,13 +60,15 @@ Rsyslog will forward all matched log entries to our TCP Server which will do a l
 Install the npm requirements with npm install for the ssh-tracker tcp server.
 Copy config.json.example to config.json and provide all details
 
-```"host" : "127.0.0.1",
+```
+"host" : "127.0.0.1",
 "port" : "7071",
 "influx_host" : "127.0.0.1",
 "influx_db" : "tracker",
 "influx_user" : "admin",
 "influx_pass" : "WhatEverSuperSecret",
-"ipinfo_token": "ABCDEFUC*"```
+"ipinfo_token": "ABCDEFUC*"
+```
 
 Run the TCP server with node ssh-tracker.js
 It's suggested to use pm2 to run the node application as a service.
