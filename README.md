@@ -62,7 +62,7 @@ Copy config.json.example to config.json and provide all details
 
 ```
 "host" : "127.0.0.1",
-"port" : "7071",
+"port" : "7010",
 "influx_host" : "127.0.0.1",
 "influx_db" : "tracker",
 "influx_user" : "admin",
