@@ -1,4 +1,4 @@
-var geohash = require("ngeohash");
+const geohash = require("ngeohash");
 const config = require("./config");
 const axios = require("axios");
 const Influx = require("influx");
@@ -36,6 +36,7 @@ server.on('connection', function(sock) {
         const instance = axios.create({
             baseURL: "http://ipinfo.io"
         });
+        if(net.isIP(message.ip) === 4){
         instance
             .get(`/${message.ip}?token=${config.ipinfo_token}`)
             .then(function(response) {
@@ -62,6 +63,9 @@ server.on('connection', function(sock) {
             .catch(function(error) {
                 console.log(error);
             });
+        }else{
+            console.log("invalid ip");
+        }
     });
 
     // Add a 'close' event handler to this instance of socket
