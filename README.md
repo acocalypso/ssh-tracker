@@ -7,11 +7,12 @@ This tool is designed to use rsylog to get ssh log entries from /var/auth.log
 It is based of SCHKN's Design from <https://devconnected.com/geolocating-ssh-hackers-in-real-time/>
 
 Requirements:
-Node V16.x
-Influxdb
-Rsyslog
-Grafana
-IPInfo Token free plan -> <https://ipinfo.io/> 50k lookups/month for free
+
+- Node V16.x
+- Influxdb
+- Rsyslog
+- Grafana
+- IPInfo Token free plan -> <https://ipinfo.io/> 50k lookups/month for free
 
 # Installation Steps
 
